@@ -1,0 +1,30 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <script src="Person.js"></script>
+    <script src="Husband.js"></script>
+    <script src="Wife.js"></script>
+    <script src="PaymentMethod.js"></script>
+
+    <script>
+         let bill = '200$';
+         let wifeHere = false;
+         let husband = new Husband('husband',new useDebit());
+         
+         if (wifeHere) {
+            husband.Pay(bill);
+         } else {
+            husband.paymentMethod = new useCredit();
+            husband.Pay(bill);
+         }
+
+         let wife = new Wife('wife', new useDebit());
+         wife.Pay(bill);
+    </script>
+</body>
+
+</html>
